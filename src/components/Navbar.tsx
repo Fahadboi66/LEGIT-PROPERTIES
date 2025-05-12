@@ -1,23 +1,8 @@
-
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X, Home, User, Building, MessageSquare, HelpCircle, LogIn } from 'lucide-react';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { name: 'HOME', href: '#', icon: <Home className="h-4 w-4" /> },
@@ -28,19 +13,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen 
-          ? 'bg-black backdrop-blur-md shadow-md border-b border-red-500/30' 
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <nav className="fixed top-0 left-0 w-screen z-50 bg-black shadow-md border-b border-red-500/30 overflow-hidden">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 max-w-full">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center max-w-[60%] sm:max-w-none">
             <a href="#" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-white">
+              <span className="text-xl sm:text-2xl font-bold text-white truncate">
                 LEGIT<span className="text-red-500">PROPERTIES</span>
               </span>
             </a>
@@ -52,14 +31,14 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium transition-colors duration-200 flex items-center space-x-1 text-gray-100 hover:text-red-400"
+                className="text-sm font-medium transition-colors duration-200 text-gray-100 hover:text-red-400"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="#"
-              className="ml-6 px-5 py-2 bg-red-600 text-white rounded-md font-medium hover:bg-red-700 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 border border-red-400"
+              className="ml-6 px-5 py-2 bg-red-600 text-white rounded-md font-medium hover:bg-red-700 transition-all duration-300 hover:shadow-lg border border-red-400"
             >
               SIGN UP
             </a>
