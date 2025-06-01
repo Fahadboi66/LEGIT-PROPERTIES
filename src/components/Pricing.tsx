@@ -18,28 +18,28 @@ const PricingCard = ({ plan, index, inView }: { plan: Plan; index: number; inVie
     <div 
       className={`rounded-lg overflow-hidden transition-all duration-700 transform ${
         isHovered ? 'scale-105 shadow-xl' : 'shadow-lg'
-      } ${plan.popular ? 'border-2 border-red-500' : 'border border-gray-700'} ${
+      } ${plan.popular ? 'border-2 border-luxury-blue' : 'border border-gray-700'} ${
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`p-6 ${plan.popular ? 'bg-red-600' : 'bg-black'}`}>
+      <div className={`p-6 ${plan.popular ? 'bg-black' : 'bg-luxury-dark'}`}>
         <h3 className="text-xl font-bold text-white">{plan.name}</h3>
         <div className="mt-4 flex items-baseline text-white">
           <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
           <span className="ml-1 text-lg font-semibold">referral fee</span>
         </div>
-        <p className="mt-2 text-sm text-white/80">{plan.description}</p>
+        <p className="mt-2 text-sm text-luxury-grey">{plan.description}</p>
       </div>
       
       <div className="p-6 bg-gray-900 text-white space-y-4">
         <ul className="space-y-3">
           {plan.features.map((feature, index) => (
             <li key={index} className="flex items-start">
-              <Check className="h-5 w-5 text-red-500 flex-shrink-0 mr-2" />
-              <span className="text-gray-200">{feature}</span>
+              <Check className="h-5 w-5 text-luxury-blue flex-shrink-0 mr-2" />
+              <span className="text-luxury-grey">{feature}</span>
             </li>
           ))}
         </ul>
@@ -48,8 +48,8 @@ const PricingCard = ({ plan, index, inView }: { plan: Plan; index: number; inVie
           href="#contact" 
           className={`mt-6 w-full block text-center py-3 px-4 rounded-md font-medium transition-colors duration-300 ${
             plan.popular 
-              ? 'bg-red-600 text-white hover:bg-red-700 border border-red-400' 
-              : 'bg-black text-white border border-red-500 hover:bg-red-900/20'
+              ? 'bg-luxury-blue text-white hover:bg-blue-700 border border-blue-400' 
+              : 'bg-black text-white border border-blue-500 hover:bg-luxury-dark'
           }`}
         >
           {plan.linkText}
@@ -57,7 +57,7 @@ const PricingCard = ({ plan, index, inView }: { plan: Plan; index: number; inVie
       </div>
       
       {plan.popular && (
-        <div className="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 text-sm font-semibold">
+        <div className="absolute top-0 right-0 bg-luxury-blue text-white px-3 py-1 text-sm font-semibold">
           Popular
         </div>
       )}
@@ -138,13 +138,13 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-black border-t border-gray-800">
+    <section id="pricing" className="py-20 bg-luxury-white border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="mt-2 text-4xl font-bold text-white sm:text-5xl">
+          <h2 className="mt-2 text-4xl font-bold text-luxury-dark sm:text-5xl">
             Simple Pricing Structure
           </h2>
-          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-luxury-grey max-w-3xl mx-auto">
             We only charge when you succeed. 20% referral fee on closed deals, with no upfront costs.
           </p>
         </div>
@@ -158,7 +158,7 @@ const Pricing = () => {
         </div>
         
         <div className={`mt-10 text-center transition-all duration-700 delay-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center text-red-500">
+          <div className="inline-flex items-center text-luxury-blue">
             <Info className="h-5 w-5 mr-2" />
             <span>Need a custom plan? <a href="#contact" className="font-semibold underline">Contact us</a></span>
           </div>

@@ -15,10 +15,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              
-              <a href="#" className="flex items-center space-x-2">
-                <span className="text-2xl font-bold text-white">
-                  LEGIT<span className="text-red-500">PROPERTIES</span>
+              <a href="#" className="flex items-center space-x-1">
+                <span className="text-2xl font-bold text-luxury-blue tracking-tight">
+                  LEGIT
+                </span>
+                <span className="text-2xl font-bold text-luxury-white tracking-tight">
+                  PROPERTIES
                 </span>
               </a>
             </div>
@@ -153,9 +155,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-lynx-500 mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400">
-                  Canada
-                </span>
+                <span className="text-gray-400">Canada</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-lynx-500 mr-3 flex-shrink-0" />
@@ -163,7 +163,9 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-lynx-500 mr-3 flex-shrink-0" />
-                <span className="text-gray-400">contact@legitproperties.com</span>
+                <span className="text-gray-400">
+                  contact@legitproperties.com
+                </span>
               </li>
             </ul>
           </div>
@@ -173,7 +175,8 @@ const Footer = () => {
 
         <div className="text-center text-gray-500 text-sm">
           <p>
-            &copy; {new Date().getFullYear()} LEGIT-PROPERTIES. All rights reserved.
+            &copy; {new Date().getFullYear()} LEGIT-PROPERTIES. All rights
+            reserved.
           </p>
         </div>
       </div>

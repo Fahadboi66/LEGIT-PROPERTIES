@@ -29,9 +29,9 @@ const Features = () => {
   }, []);
 
   return (
-    <section id="features" className="py-20 bg-black text-white border-t border-red-500/20 relative">
+    <section id="features" className="py-20 bg-luxury-dark text-white border-t border-red-500/20 relative">
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-10"
         style={{ 
           backgroundImage: "url('https://images.unsplash.com/photo-1542889601-399c4f3a8402?q=80&w=2070')", 
           backgroundSize: 'cover', 
@@ -45,7 +45,7 @@ const Features = () => {
           <h2 className="mt-2 text-5xl font-bold text-white mb-4">
             Why us?
           </h2>
-          <div className="h-1 w-20 bg-red-500 mx-auto mb-8"></div>
+          <div className="h-1 w-20 bg-blue-500 mx-auto mb-8"></div>
           <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
             At Legit Properties, we specialize in delivering high-quality seller leads and dedicated
             support for real estate professionals. Discover what makes us a trusted partner for agents
@@ -56,7 +56,7 @@ const Features = () => {
         <div ref={featuresRef} className="grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className={`transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <div className="bg-black/50 backdrop-blur-sm p-8 rounded-lg border border-red-500/20 h-full red-glow">
-              <div className="text-red-500 mb-4">
+              <div className="text-luxury-blue mb-4">
                 <Shield className="h-12 w-12" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Legit properties</h3>
@@ -71,7 +71,7 @@ const Features = () => {
           
           <div className={`transition-all duration-700 delay-200 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <div className="bg-black/50 backdrop-blur-sm p-8 rounded-lg border border-red-500/20 h-full red-glow">
-              <div className="text-red-500 mb-4">
+              <div className="text-luxury-blue mb-4">
                 <Check className="h-12 w-12" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">No competitors</h3>
@@ -88,7 +88,7 @@ const Features = () => {
           
           <div className={`transition-all duration-700 delay-400 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <div className="bg-black/50 backdrop-blur-sm p-8 rounded-lg border border-red-500/20 h-full red-glow">
-              <div className="text-red-500 mb-4">
+              <div className="text-luxury-blue mb-4">
                 <XCircle className="h-12 w-12" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cancel Anytime - Zero Hassle</h3>

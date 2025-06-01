@@ -53,23 +53,14 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-black border-t border-red-500/20 relative">
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=2074')", 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center',
-          filter: 'grayscale(100%)'
-        }}
-      ></div>
-      
+    <section id="faq" className="py-10 bg-luxury-white border-t relative">
+     
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl font-bold text-white mb-4">
+        <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-5xl font-bold text-luxury-dark mb-4">
             FAQ's
           </h2>
-          <div className="h-1 w-20 bg-red-500 mx-auto mb-8"></div>
+          <div className="h-1 w-20 bg-luxury-blue mx-auto mb-2"></div>
         </div>
         
         <div 
@@ -79,7 +70,7 @@ const FAQ = () => {
           {faqItems.map((item, index) => (
             <div 
               key={index}
-              className={`transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-red-500/20`}
+              className={`transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-luxury-dark backdrop-blur-sm p-6 rounded-lg border border-red-500/20`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onClick={() => toggleQuestion(index)}
             >
@@ -87,7 +78,7 @@ const FAQ = () => {
                 <h3 className="text-2xl font-bold text-white">
                   {item.question}
                 </h3>
-                <p className="mt-2 text-gray-300">
+                <p className="mt-2 text-luxury-grey">
                   {item.answer}
                 </p>
               </div>

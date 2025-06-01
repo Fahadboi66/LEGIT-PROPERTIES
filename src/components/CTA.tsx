@@ -34,10 +34,10 @@ const CTA = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden bg-black" ref={containerRef}>
+    <section id="contact" className="py-20 relative overflow-hidden border-t bg-luxury-white" ref={containerRef}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div 
-          className={`bg-black rounded-2xl p-10 md:p-16 shadow-2xl overflow-hidden relative transition-all duration-1000 transform ${inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} border border-red-500/30`}
+          className={`bg-black rounded-2xl p-10 md:p-16 shadow-2xl overflow-hidden relative transition-all duration-1000 transform ${inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} border border-blue-500/30`}
         >
           <div 
             className={`absolute inset-0 transition-transform duration-3000 ${imageLoaded && inView ? 'scale-100' : 'scale-110'}`}
@@ -45,7 +45,7 @@ const CTA = () => {
               backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(139,0,0,0.3)), url('https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2067')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              opacity: 0.3,
+              opacity: 0.7,
               transformOrigin: 'center',
               transition: 'transform 5s ease-out'
             }}
@@ -60,7 +60,7 @@ const CTA = () => {
               We're ready to connect you with high-quality seller leads today.
             </p>
             
-            <a href="#" className="inline-block bg-red-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-red-700 transition-colors duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-red-400">
+            <a href="#" className="inline-block bg-luxury-blue text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-blue-400">
               CONTACT NOW
             </a>
           </div>

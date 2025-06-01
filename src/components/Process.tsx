@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { CheckCircle } from 'lucide-react';
 
@@ -36,8 +35,8 @@ const Process = () => {
     },
     {
       number: "2",
-      title: "Triple verification",
-      description: "Our Triple Verification Team meticulously reviews each lead and ensure sellers authenticity."
+      title: "Triple Verification",
+      description: "Our Triple Verification Team meticulously reviews each lead and ensures sellers' authenticity."
     },
     {
       number: "3",
@@ -52,38 +51,28 @@ const Process = () => {
     {
       number: "5",
       title: "Deal Closure & Referral Fee",
-      description: "We charge a 20% referral fee only upon the successful closing of a transaction no upfront costs or hidden fees."
+      description: "We charge a 20% referral fee only upon the successful closing of a transaction—no upfront costs or hidden fees."
     }
   ];
 
   return (
-    <section id="process" className="py-20 bg-black text-white border-t border-red-500/20 relative">
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070')", 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center',
-          filter: 'grayscale(100%)'
-        }}
-      ></div>
-      
+    <section id="process" className="py-20 border-t bg-luxury-white text-luxury-dark border-red-500/20 relative blue-glow overflow-x-hidden overflow-y-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl font-bold text-white mb-4">
+          <h2 className="text-5xl font-bold text-luxury-dark mb-4">
             Our Step-by-Step Process
           </h2>
-          <div className="h-1 w-32 bg-red-500 mx-auto mb-8"></div>
+          <div className="h-1 w-32 bg-blue-500 mx-auto mt-3 mb-8"></div>
         </div>
         
         <div ref={processRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.slice(0, 3).map((step, index) => (
             <div 
               key={index} 
-              className={`p-6 bg-black/50 backdrop-blur-sm rounded-lg border border-red-500/20 transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+              className={`p-6 bg-luxury-dark backdrop-blur-sm rounded-lg border border-red-500/20 transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="text-red-500 mb-4 flex justify-center">
+              <div className="text-luxury-blue mb-4 flex justify-center">
                 <div className="rounded-full bg-red-500/10 p-3">
                   <CheckCircle className="h-10 w-10" />
                 </div>
@@ -102,10 +91,10 @@ const Process = () => {
           {steps.slice(3).map((step, index) => (
             <div 
               key={index + 3} 
-              className={`p-6 bg-black/50 backdrop-blur-sm rounded-lg border border-red-500/20 transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+              className={`p-6 bg-luxury-dark backdrop-blur-sm rounded-lg border border-red-500/20 transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
               style={{ transitionDelay: `${(index + 3) * 100}ms` }}
             >
-              <div className="text-red-500 mb-4 flex justify-center">
+              <div className="text-luxury-blue mb-4 flex justify-center">
                 <div className="rounded-full bg-red-500/10 p-3">
                   <CheckCircle className="h-10 w-10" />
                 </div>

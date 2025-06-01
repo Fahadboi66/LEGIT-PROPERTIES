@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
@@ -13,12 +12,10 @@ import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 
 const Index = () => {
-  // Add scroll restoration on navigation
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Intersection observer for sections
   const [visibleSections, setVisibleSections] = useState<{[key: string]: boolean}>({
     about: false,
     stats: false,
@@ -31,7 +28,6 @@ const Index = () => {
     footer: false
   });
   
-  // Create refs for each section
   const aboutRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
@@ -42,7 +38,6 @@ const Index = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
 
-  // Set up intersection observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -58,15 +53,14 @@ const Index = () => {
       { threshold: 0.1 }
     );
 
-    // Observe each section
     const sections = [
       { ref: aboutRef, id: 'about' },
       { ref: statsRef, id: 'stats' },
       { ref: featuresRef, id: 'features' },
       { ref: processRef, id: 'process' },
       { ref: testimonialsRef, id: 'testimonials' },
-      { ref: faqRef, id: 'faq' },
       { ref: pricingRef, id: 'pricing' },
+      { ref: faqRef, id: 'faq' },
       { ref: ctaRef, id: 'cta' },
       { ref: footerRef, id: 'footer' }
     ];
@@ -87,26 +81,24 @@ const Index = () => {
     };
   }, []);
 
-  // Add red accent elements 
-  const RedAccent = ({ position, delay = 0 }: { position: string, delay?: number }) => (
+  const BlueAccent = ({ position, delay = 0 }: { position: string, delay?: number }) => (
     <div 
-      className={`absolute ${position} w-2 h-2 bg-red-500 rounded-full animate-ping`} 
+      className={`absolute ${position} w-3 h-3 bg-luxury-blue rounded-full animate-ping blue-glow`} 
       style={{ animationDuration: `${3 + delay}s`, animationDelay: `${delay}s` }}
     ></div>
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-luxury-dark to-gray-900 text-luxury-white">
       <Navbar />
       <Hero />
       
       <div className="relative">
-        {/* Red accents scattered throughout the page */}
-        <RedAccent position="top-40 left-10" />
-        <RedAccent position="bottom-80 right-20" delay={1} />
-        <RedAccent position="top-[60%] left-[80%]" delay={0.5} />
-        <RedAccent position="top-[30%] right-[10%]" delay={1.5} />
-        <RedAccent position="bottom-[20%] left-[15%]" delay={2} />
+        <BlueAccent position="top-40 left-10" />
+        <BlueAccent position="bottom-80 right-20" delay={1} />
+        <BlueAccent position="top-[60%] left-[80%]" delay={0.5} />
+        <BlueAccent position="top-[30%] right-[10%]" delay={1.5} />
+        <BlueAccent position="bottom-[20%] left-[15%]" delay={2} />
       
         <div ref={aboutRef} className={`transition-all duration-1000 transform ${visibleSections.about ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <About />
@@ -127,15 +119,15 @@ const Index = () => {
         <div ref={testimonialsRef} className={`transition-all duration-1000 transform ${visibleSections.testimonials ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <Testimonials />
         </div>
-        
-        <div ref={faqRef} className={`transition-all duration-1000 transform ${visibleSections.faq ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <FAQ />
-        </div>
-        
+
         <div ref={pricingRef} className={`transition-all duration-1000 transform ${visibleSections.pricing ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <Pricing />
         </div>
         
+        <div ref={faqRef} className={`transition-all duration-1000 transform ${visibleSections.faq ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          <FAQ />
+        </div>
+                
         <div ref={ctaRef} className={`transition-all duration-1000 transform ${visibleSections.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <CTA />
         </div>

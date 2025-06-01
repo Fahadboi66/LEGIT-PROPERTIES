@@ -30,15 +30,15 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 bg-black text-white border-t border-red-500/30">
+    <section id="about" className="py-20 bg-luxury-white border-t border-red-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="mt-2 text-5xl font-bold text-white sm:text-6xl">
+          <h2 className="mt-2 text-5xl font-bold sm:text-6xl text-luxury-blue">
             Who We Are
           </h2>
           <div className="flex justify-center items-center mt-4">
-            <Search className="h-6 w-6 mr-2 text-red-500" />
-            <p className="text-lg text-gray-300">
+            <Search className="h-6 w-6 mr-2 text-black" />
+            <p className="text-lg text-luxury-grey">
               Explore How Legit Properties Redefines Quality in Real Estate Lead Generation.
             </p>
           </div>
@@ -58,7 +58,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               
               <div className="absolute bottom-0 left-0 p-4">
-                <div className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-semibold rounded-md">
+                <div className="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-md">
                   TRUSTED
                 </div>
               </div>
@@ -68,14 +68,14 @@ const About = () => {
           </div>
           
           <div className={`md:col-span-3 space-y-6 transition-all duration-1000 delay-300 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
-            <p className="text-white text-lg">
+            <p className="text-luxury-dark text-lg">
               At Legit Properties, we're a British Columbia-based referral network committed to 
               helping real estate agents across Canada grow their seller-side business. Our mission is 
               simple: connect licensed agents with high-intent property sellers and empower them 
               to close more deals with confidence and consistency.
             </p>
             
-            <p className="text-white text-lg">
+            <p className="text-luxury-dark text-lg">
               We specialise in delivering qualified seller referrals, not just cold leads. Our rigorous 
               vetting process ensures agents spend less time chasing and more time closing. 
               For every successfully closed transaction, we charge a straightforward 20% referral fee. 
@@ -83,7 +83,7 @@ const About = () => {
               your business efficiently and sustainably.
             </p>
             
-            <p className="text-white text-lg">
+            <p className="text-luxury-dark text-lg">
               Whether you're a solo agent looking to expand or a brokerage ready to boost listing 
               volume, Legit Properties is your trusted partner in real estate growth.
             </p>

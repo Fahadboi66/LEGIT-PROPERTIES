@@ -16,19 +16,19 @@ const TestimonialCard = ({ testimonial, index, inView }: {
 }) => {
   return (
     <div 
-      className={`bg-black/70 backdrop-blur-sm p-6 rounded-lg shadow-lg mx-4 my-8 min-w-[300px] max-w-[350px] card-hover transition-all duration-700 transform border border-red-500/20 ${
+      className={`bg-luxury-dark/70 backdrop-blur-sm p-6 rounded-lg shadow-lg mx-4 my-8 min-w-[300px] max-w-[350px] card-hover transition-all duration-700 transform border border-red-500/20 ${
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="flex text-red-500 mb-3">
+      <div className="flex text-luxury-blue mb-3">
         {[...Array(testimonial.rating)].map((_, i) => (
           <Star key={i} fill="currentColor" className="h-5 w-5" />
         ))}
       </div>
       <p className="text-white mb-4">&ldquo;{testimonial.content}&rdquo;</p>
       <div className="flex items-center">
-        <div className="bg-red-500 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">
+        <div className="bg-luxury-blue text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">
           {testimonial.author.charAt(0)}
         </div>
         <div className="ml-3">
@@ -94,9 +94,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-black text-white border-t border-red-500/20 relative">
+    <section id="testimonials" className="py-20 bg-luxury-dark text-white border-t border-red-500/20 relative">
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-10"
         style={{ 
           backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070')", 
           backgroundSize: 'cover', 
@@ -110,8 +110,8 @@ const Testimonials = () => {
           <h2 className="mt-2 text-4xl font-bold text-white sm:text-5xl">
             SIMPLE VERIFIED REFERRALS ACROSS CANADA
           </h2>
-          <div className="h-1 w-32 bg-red-500 mx-auto my-4"></div>
-          <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="h-1 w-32 bg-blue-500 mx-auto my-4"></div>
+          <p className="mt-4 text-xl text-luxury-grey max-w-3xl mx-auto">
             Providing the best leads for real estate agents
           </p>
         </div>
